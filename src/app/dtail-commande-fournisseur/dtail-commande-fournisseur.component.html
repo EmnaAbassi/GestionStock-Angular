@@ -1,0 +1,31 @@
+<div class="col-md-12 mb-3">
+    <img src="assets/cmd.jpg" class="" width="200px" height="200px">
+</div>
+<h3>Voir les détails de commande Fournisseur</h3>
+<table class="table table-bordered">
+    <thead>
+      <tr class="table-success">
+        <th scope="col">#</th>
+        <th scope="col">code</th>
+        <th scope="col">dateDeCommande</th>
+        <th scope="col">fournisseur</th>
+        <th scope="col">article</th>
+        
+      
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-warning">
+        <th scope="row">1</th>
+        <td>{{four.code}}</td>
+        <td>{{four.dateDeCommande}}</td>
+       <td>{{four.fournisseur}}</td>
+       <td>{{four.article}}</td>
+      
+   
+      </tr>
+</tbody>
+</table>
+<button class="btn btn-danger mr-3"(click)="cancel()">
+    <i class="fa-solid fa-ban blue-color"></i> &nbsp; Retourner vers la page précédente</button>

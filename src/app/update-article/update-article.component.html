@@ -1,0 +1,64 @@
+<div class="col mb-3">
+    <div class="col-md-12 mb-3">
+        <img src="assets/product2.png" class="rounded-circle" width="200px" height="200px">
+    </div>
+   <hr>
+     <div class="col-md-12">
+        <div class="col-md-12 mb-3">
+            <h2><i class="fa-solid fa-circle-info blue-color"></i>&nbsp; Modifier un  article</h2>
+        </div> 
+ 
+         <div class="col-md-12">
+             <form (ngSubmit)="onSubmit()">
+ 
+                 <div class="form-group">
+                     <label>codeArticle</label>
+                     <input type="text" class="form-control" id="codeArticle" [(ngModel)]="article.codeArticle" name="codeArticle" >
+                 </div>
+   
+                 <div class="form-group">
+                   <label>designation</label>
+                   <input type="text" class="form-control" id="designation" [(ngModel)]="article.designation"
+                  name="designation" >
+               </div>
+ 
+               <div class="form-group">
+                 <label>prixUnitaireHT</label>
+                 <input type="text" class="form-control" id="prixUnitaireHT" [(ngModel)]="article.prixUnitaireHT"
+                  name="prixUnitaireHT" >
+             </div>
+ 
+             <div class="form-group">
+                 <label>tauxTVA</label>
+                 <input type="text" class="form-control" id="tauxTVA" [(ngModel)]="article.tauxTVA"
+             name="tauxTVA" >
+             </div>
+ 
+             <div class="form-group">
+                 <label>prixUnitaireTTC</label>
+                 <input type="text" class="form-control" id="prixUnitaireTTC" [(ngModel)]="article.prixUnitaireTTC"
+             name="prixUnitaireTTC" >
+             </div>
+ 
+                <div class="form-group">
+                 <label>idCategorie</label>
+                 <input type="text" class="form-control" id="idCategory" [(ngModel)]="article.idCategorie"
+             name="idCategory" >
+                 
+             </div>  
+       
+               <button type="submit" class="btn btn-success" value="Submit">
+                   <i class="fa-solid fa-save blue-color"></i>Submit</button>
+               
+                             <button class="btn btn-danger mr-3"(click)="cancel()">
+                                 <i class="fa-solid fa-ban blue-color"></i> &nbsp; Annuler</button>
+         </form>
+                  
+                 
+       
+ 
+             
+ 
+     </div>
+    </div>
+ </div>

@@ -1,0 +1,34 @@
+<h3>Voir Détails-Fournisseur</h3>
+<table class="table table-bordered">
+    <thead>
+      <tr class="table-success">
+        <th scope="col">#</th>
+        <th scope="col">nom</th>
+        <th scope="col">prenom</th>
+        <th scope="col">adresse1</th>
+        <th scope="col">adresse2</th>
+        <th scope="col">ville</th>
+        <th scope="col">codePostale</th>
+        <th scope="col">photo</th>
+        <th scope="col">mail</th>
+        <th scope="col">numTel</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-warning">
+        <th scope="row">1</th>
+        <td>{{client.nom}}</td>
+        <td>{{client.prenom}}</td>
+       <td>{{client.adresse1}}</td>
+       <td>{{client.adresse2}}</td>
+       <td>{{client.ville}}</td>
+       <td>{{client.codePostale}}</td>
+       <td>{{client.photo}}</td>
+       <td>{{client.mail}}</td>
+       <td>{{client.numTel}}</td>
+      </tr>
+</tbody>
+</table>
+<button class="btn btn-danger mr-3"(click)="cancel()">
+    <i class="fa-solid fa-ban blue-color"></i> &nbsp; Retourner vers la page précédente</button>

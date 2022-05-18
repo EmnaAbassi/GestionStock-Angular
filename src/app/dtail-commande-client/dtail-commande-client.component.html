@@ -1,0 +1,32 @@
+<h3>Voir les détails de commande client</h3>
+<div class="col mb-3">
+    <div class="col-md-12 mb-3">
+        <img src="assets/cmd1.png" class="rounded-circle" width="200px" height="200px">
+    </div>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">code</th>
+            <th scope="col">dateDeCommande</th>
+            <th scope="col">client</th>
+            <th scope="col">article</th>
+          </tr>
+      
+    
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{cc.code}}</td>
+        <td>{{cc.dateDeCommande}}</td>
+       <td>{{cc.client}}</td>
+       <td>{{cc.article}}</td>
+      
+   
+      </tr>
+</tbody>
+</table>
+<button class="btn btn-danger mr-3"(click)="cancel()">
+    <i class="fa-solid fa-ban blue-color"></i> &nbsp; Retourner vers la page précédente</button>

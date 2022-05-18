@@ -1,0 +1,93 @@
+<div class="col">
+    <div class="row m-3">
+        
+        <div class="col-md-8 p-0">
+           <h1>Liste des utilisateurs</h1>
+        </div>
+        <div class="col-md-4 text-right">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-warning">
+                        <i class="fa-solid fa-upload"></i> &nbsp;
+            
+                        IMPORTER</button></div>
+            
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-success">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> &nbsp;
+                        EXPORTER
+                    </button>
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-primary"(click)="newUser()">
+                        <i class="fa-solid fa-plus"></i> &nbsp;
+                        NOUVEAU
+                    </button>
+                </div>
+             </div>
+             
+            
+            
+        </div>
+    </div>
+
+    <div class="col m-3">
+        <div class="row mb-1 mr-0 custom-border">
+            <div class="col-md-2 custom-border-right p-1 text-center mb-1 mt-1 ">
+               
+                 <img src="assets/user1.jpg" width="100px" height="100px">
+               
+            </div>
+            
+            
+             
+              <table class="table table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">nom</th>
+                    <th scope="col">prenom</th>
+                    <th scope="col">email </th>
+                    <th scope="col">numTel</th>
+                    <th scope="col">motDePasse</th>
+                    <th scope="col">adresse1</th>
+                    <th scope="col">adresse2</th>
+                    <th scope="col">ville</th>
+                    <th scope="col">codePostale</th>
+                    <th scope="col">actions</th>
+            
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let u of users" >
+                   
+                   <td>{{u.id}}</td>
+                   <td>{{u.nom}}</td>
+                   <td>{{u.prenom}}</td>
+                   <td>{{u.email}}</td>
+                   <td>{{u.numTel}}</td>
+                   <td>{{u.motDePasse}}</td>
+                   <td>{{u.adresse1}}</td>
+                   <td>{{u.adresse2}}</td>
+                   <td>{{u.ville}}</td>
+                   <td>{{u.codePostale}}</td>
+                   <td>
+                    <button (click)="updateUser(u.id)" class="btn btn-info">update</button>
+                    <button (click)="deleteUser(u.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+                    <button (click)="DetailUser(u.id)" type="button" class="btn btn-link "><i class="fa-solid fa-rectangle-list" style="margin-left:10px;"></i> &nbsp; Détails</button>
+
+                   </td>
+                
+                </tbody>
+              </table>
+            
+            </div>        
+    </div>
+
+    <div class="row m-3 text-center">
+        <app-pagination></app-pagination>
+    </div>
+
+
+
+</div>

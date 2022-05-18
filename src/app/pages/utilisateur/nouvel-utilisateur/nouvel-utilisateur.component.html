@@ -1,0 +1,96 @@
+<div class="col mb-3">
+    <div class="col-md-12 mb-3">
+        <img src="assets/user1.jpg" class="rounded-circle" width="200px" height="200px">
+    </div>
+   <hr>
+     <div class="col-md-12">
+         <div class="col-md-12 mb-3 mt-3">
+             <h2> Nouveau utilisateur</h2>
+         </div> 
+  
+          <div class="col-md-12">
+
+            <form (ngSubmit)="onSubmit()">
+
+              <div class="form-group">
+                  <label>nom</label>
+                  <input type="text" class="form-control" id="nom" 
+                  [(ngModel)]="user.nom" name="nom" >
+              </div>
+
+              <div class="form-group">
+                <label>prenom</label>
+                <input type="text" class="form-control" id="prenom" 
+                [(ngModel)]="user.prenom" name="prenom" >
+            </div>
+
+            <div class="form-group">
+                <label>email</label>
+                <input type="text" class="form-control" id="email" 
+                [(ngModel)]="user.email" name="email" >
+            </div>
+
+            <div class="form-group">
+                <label>numTel</label>
+                <input type="text" class="form-control" id="numTel" 
+                [(ngModel)]="user.numTel" name="numTel" >
+            </div>
+
+            <div class="form-group">
+                <label>motDePasse</label>
+                <input type="password" class="form-control" id="motDePasse" 
+                [(ngModel)]="user.motDePasse" name="motDePasse" >
+            </div>
+
+            <div class="form-group">
+                <label>adresse1</label>
+                <input type="text" class="form-control" id="adresse1" 
+                [(ngModel)]="user.adresse1" name="adresse1" >
+            </div>
+
+            <div class="form-group">
+                <label>adresse2</label>
+                <input type="text" class="form-control" id="adresse2" 
+                [(ngModel)]="user.adresse2" name="adresse2" >
+            </div>
+
+            <div class="form-group">
+                <label>ville</label>
+                <input type="text" class="form-control" id="ville" 
+                [(ngModel)]="user.ville" name="ville" >
+            </div>
+
+            <div class="form-group">
+                <label>codePostale</label>
+                <input type="text" class="form-control" id="codePostale" 
+                [(ngModel)]="user.codePostale" name="codePostale" >
+            </div>
+
+              
+    
+            <button type="submit" class="btn btn-success" value="Submit">
+                <i class="fa-solid fa-save blue-color"></i>Submit</button>
+            
+                          <button class="btn btn-danger mr-3"(click)="cancel()">
+                              <i class="fa-solid fa-ban blue-color"></i> &nbsp; Annuler</button>
+              </form>
+      </div>
+    </div>
+   
+              
+</div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

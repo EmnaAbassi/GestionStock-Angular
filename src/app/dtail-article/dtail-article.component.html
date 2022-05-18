@@ -1,0 +1,30 @@
+<h3>view Article</h3>
+<table class="table table-bordered">
+    <thead>
+      <tr class="table-success">
+        <th scope="col">#</th>
+        <th scope="col">codeArticle</th>
+        <th scope="col">designation</th>
+        <th scope="col">prixUnitaireHT</th>
+        <th scope="col">tauxTVA</th>
+        <th scope="col">prixUnitaireTTC</th>
+        <th scope="col">idcategorie</th>
+      
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-warning">
+        <th scope="row">1</th>
+        <td>{{article.codeArticle}}</td>
+        <td>{{article.designation}}</td>
+       <td>{{article.prixUnitaireHT}}</td>
+       <td>{{article.tauxTVA}}</td>
+       <td>{{article.prixUnitaireTTC}}</td>
+       <td>{{article.idCategorie}}</td>
+   
+      </tr>
+</tbody>
+</table>
+<button class="btn btn-danger mr-3"(click)="cancel()">
+    <i class="fa-solid fa-ban blue-color"></i> &nbsp; Retourner vers la page précédente</button>

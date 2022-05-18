@@ -1,0 +1,21 @@
+.main-container{
+    margin:50px;
+}
+
+.min-height-600{
+    min-height: 600px;
+
+}
+
+.no-flex-wrap{
+    flex-wrap:inherit !important;
+}
+.qq{
+    
+    
+    width: 100%;
+    height: 70px;
+    background-color: beige;
+    text-align: center;
+    color:black;
+}

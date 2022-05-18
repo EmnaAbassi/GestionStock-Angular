@@ -1,0 +1,62 @@
+<div class="col mb-3">
+    <div class="col-md-12 mb-3 mt-3">
+        <img src="assets/User-Icon.webp" class="rounded-circle" width="200px" height="200px">
+    </div>
+    <h2>Update Client</h2>
+   <hr>
+     <div class="col-md-12">
+        <form (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <label>nom</label>
+                <input type="text" [(ngModel)]="client.nom" name="nom" class="form-control" id="nom"  placeholder="nom">
+            </div>
+          
+            <div class="form-group">
+              <label>Prenom</label>
+              <input type="text" [(ngModel)]="client.prenom" name="prenom"  class="form-control" id="prenom" placeholder="prenom">
+          </div>
+
+          <div class="form-group">
+            <label>adresse1</label>
+            <input type="text" [(ngModel)]="client.adresse1" name="adresse1"  class="form-control" id="adresse1" placeholder="adresse1">
+        </div>
+
+        <div class="form-group">
+            <label>adresse2</label>
+            <input type="text" [(ngModel)]="client.adresse2" name="adresse2"  class="form-control" id="adresse2" placeholder="adresse2">
+        </div>
+
+        <div class="form-group">
+            <label>Ville</label>
+            <input type="text" [(ngModel)]="client.ville" name="ville"  class="form-control" id="ville" placeholder="ville">
+        </div>
+
+        <div class="form-group">
+            <label>codePostale</label>
+            <input type="text" [(ngModel)]="client.codePostale" name="codePostale"  class="form-control" id="codePostale" placeholder="codePostale">
+        </div>
+
+        <div class="form-group">
+            <label>Photo</label>
+            <input type="text" [(ngModel)]="client.photo" name="photo"  class="form-control" id="photo" placeholder="photo">
+        </div>
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="text" [(ngModel)]="client.mail" name="mail"  class="form-control" id="mail" placeholder="mail">
+        </div>
+
+        <div class="form-group">
+            <label>numTel</label>
+            <input type="text" [(ngModel)]="client.numTel" name="numTel"  class="form-control" id="numTel" placeholder="numTel">
+        </div>
+        <button class="btn btn-danger mr-3"(click)="cancelClick()">
+            <i class="fa-solid fa-ban blue-color"></i> &nbsp; Annuler</button>
+        <button class="btn btn-primary"(click)="saveClick()">
+            <i class="fa-solid fa-save blue-color"></i>Submit</button>
+          </form>
+     </div>
+          <div class="col-md-12 text-right">
+        
+          </div>
+</div>

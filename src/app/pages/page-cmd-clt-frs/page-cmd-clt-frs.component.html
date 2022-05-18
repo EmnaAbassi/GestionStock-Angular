@@ -1,0 +1,88 @@
+<div class="col">
+    <div class="row m-3">
+        
+        <div class="col-md-8 p-0">
+           <h1>Commandes {{origin}}</h1>
+        </div>
+        <div class="col-md-4 text-right">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-warning">
+                        <i class="fa-solid fa-upload"></i> &nbsp;
+            
+                        IMPORTER</button></div>
+            
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-success">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> &nbsp;
+                        EXPORTER
+                    </button>
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-primary"(click)="newCommandeClient()">
+                        <i class="fa-solid fa-plus"></i> &nbsp;
+                        NOUVEAU
+                    </button>
+                </div>
+             </div>
+        </div>
+    </div>
+
+
+    <div class="col m-3">
+        <div class="row mb-1 mr-0 custom-border">
+            <div class="col-md-2 custom-border-right p-1 text-center mb-1 mt-1 ">
+               
+                 <img src="assets/cmd1.png" width="100px" height="100px">
+               
+            </div>
+            
+             <!--détails commande client-->
+              <h3>Liste des commandes clients</h3>
+              <table class="table table-striped">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">code</th>
+                    <th scope="col">dateDeCommande</th>
+                    <th scope="col">client</th>
+                    <th scope="col">article</th>
+
+                    <th scope="col">Actions</th>
+                  
+                  
+            
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let c of CCS" >
+                   
+                   <td>{{c.id}}</td>
+                   <td>{{c.code}}</td>
+                   <td>{{c.dateDeCommande}}</td>
+                   <td>{{c.client}}</td>
+                   <td>{{c.article}}</td>
+                 
+                   <td>
+                    <button (click)="updateCmd(c.id)" class="btn btn-info">update</button>
+                    <button (click)="deleteCmd(c.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+                    <button (click)="DetailCmd(c.id)" type="button" class="btn btn-link "><i class="fa-solid fa-rectangle-list" style="margin-left:10px;"></i> &nbsp; Détails</button>
+
+                   </td>
+                
+                </tbody>
+              </table>
+            
+            </div>        
+    </div>
+
+
+       
+
+    <div class="row m-3 text-center">
+        <app-pagination></app-pagination>
+    </div>
+
+
+
+</div>

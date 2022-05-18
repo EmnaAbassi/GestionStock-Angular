@@ -1,0 +1,53 @@
+<div class="col mb-3">
+    <div class="col-md-12 mb-3">
+        <img src="assets/cmd1.png" class="rounded-circle" width="200px" height="200px">
+    </div>
+   <hr>
+     <div class="col-md-12">
+         <div class="col-md-12 mb-3">
+             <h2><i class="fa-solid fa-circle-info blue-color"></i>&nbsp; Modifier la commande client</h2>
+         </div> 
+  
+          <div class="col-md-12">
+              <form (ngSubmit)="onSubmit()">
+  
+                  <div class="form-group">
+                      <label>code</label>
+                      <input type="text" class="form-control" id="code" [(ngModel)]="commande.code" name="code" >
+                  </div>
+    
+                  <div class="form-group">
+                    <label>dateDeCommande</label>
+                    <input type="text" class="form-control" id="dateDeCommande" [(ngModel)]="commande.dateDeCommande"
+                   name="dateDeCommande" >
+                </div>
+  
+                <div class="form-group">
+                  <label>client</label>
+                  <input type="text" class="form-control" id="client" [(ngModel)]="commande.client"
+                   name="client" >
+              </div>
+  
+              <div class="form-group">
+                  <label>article</label>
+                  <input type="text" class="form-control" id="article" [(ngModel)]="commande.article"
+              name="article" >
+              </div>
+  
+             
+        
+                <button type="submit" class="btn btn-success" value="Submit">
+                    <i class="fa-solid fa-save blue-color"></i>Submit</button>
+                
+                              <button class="btn btn-danger mr-3"(click)="cancel()">
+                                  <i class="fa-solid fa-ban blue-color"></i> &nbsp; Annuler</button>
+          </form>
+                   
+                  
+        
+  
+              
+  
+      </div>
+     </div>
+  </div>

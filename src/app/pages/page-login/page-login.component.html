@@ -1,0 +1,24 @@
+<div class="container my-container">
+  <div class="card justify-content-md-center">
+      <div class="card-header text-center">
+         <h2> <p class="fw-bolder">Se connecter</p> </h2>
+      </div>
+    <div class="card-cody">
+
+            <div class="mb-3">
+                <input type="email" class="form-control"  placeholder="E-mail">
+            </div>
+    
+           <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Mot de passe">
+         </div> 
+
+         <div class="mb-3 d-flex justify-content-between">
+            <a [routerLink]="['/inscrire']" class="btn btn-link">S'inscrire</a>
+
+            <button type="button" class="btn btn-primary" (click)="login()">
+                <i class="fa-solid fa-check"></i>&nbsp; Se connecter</button>
+         </div> 
+    </div>
+  </div>
+</div>

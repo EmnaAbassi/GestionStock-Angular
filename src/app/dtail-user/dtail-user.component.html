@@ -1,0 +1,39 @@
+<h3>voir les détails d'un utilisateur</h3>
+<div class="col mb-3">
+    <div class="col-md-12 mb-3">
+        <img src="assets/user1.jpg" class="rounded-circle" width="200px" height="200px">
+    </div>
+<table class="table table-bordered">
+    <thead>
+      <tr class="table-success">
+        <th scope="col">#</th>
+        <th scope="col">nom </th>
+        <th scope="col">prenom</th>
+        <th scope="col">email</th>
+        <th scope="col">numTel</th>
+        <th scope="col">motDePasse</th>
+        <th scope="col">adresse1</th>
+        <th scope="col">adresse2</th>
+        <th scope="col">ville</th>
+        <th scope="col">codePostale</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-warning">
+        <th scope="row">1</th>
+        <td>{{user.nom}}</td>
+        <td>{{user.prenom}}</td>
+       <td>{{user.email}}</td>
+       <td>{{user.numTel}}</td>
+       <td>{{user.motDePasse}}</td>
+       <td>{{user.adresse1}}</td>
+       <td>{{user.adresse2}}</td>
+       <td>{{user.ville}}</td>
+       <td>{{user.codePostale}}</td>
+   
+      </tr>
+</tbody>
+</table>
+<button class="btn btn-danger mr-3"(click)="cancel()">
+    <i class="fa-solid fa-ban blue-color"></i> &nbsp; Retourner vers la page précédente</button>

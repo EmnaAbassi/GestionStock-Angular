@@ -1,0 +1,109 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" style="color:white;">Liste des clients</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+       <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+             <a class="nav-link" ><span class="sr-only">(current)</span></a>
+          </li>
+       </ul>
+       <form class="form-inline my-2 my-lg-0">
+          <input type="search" (ngModelChange)="searchClients()" #key="ngModel" ngModel
+           name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search clients..." required>
+       </form>
+    </div>
+  </nav>
+        <div class="col-md-4 text-right">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-warning">
+                        <i class="fa-solid fa-upload"></i> &nbsp;
+            
+                        IMPORTER</button></div>
+            
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-success">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> &nbsp;
+                        EXPORTER
+                    </button>
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-primary"(click)="newClient()">
+                        <i class="fa-solid fa-plus"></i> &nbsp;
+                        NOUVEAU
+                    </button>
+                </div>
+             </div>
+        </div>
+    
+
+    <div class="col m-3">
+
+            <!--code snippet-->
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+            <div class="container" id="main-container">
+                <div class="row">
+                    <div *ngFor="let client of clients" class="col-md-6 col-xl-3">
+                        <div class="card m-b-30">
+                            <div class="card-body row">
+                                <div class="col-6">
+                                    <a href=""><img src="{{client.photo}}" alt="" class="img-fluid rounded-circle w-60"></a>
+                                </div>
+                                <div class="col-6 card-title align-self-center mb-0">
+                                    <h5>{{client?.nom}} {{client?.prenom}}</h5>
+                                    
+                                    <p class="m-0">{{client?.adresse1}} {{client.adresse2}} {{client.ville}} {{client.codePostale}}</p>
+                                </div>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><i class="fa fa-envelope float-right"></i>{{client.mail}}</li>
+                                <li class="list-group-item"><i class="fa fa-phone float-right"></i>{{client.numTel}}</li>
+                            </ul>
+                            <div class="card-body">
+                                <div class="float-right btn-group btn-group-sm">
+                                    <td><button (click)="updateClient(client.id)" class="btn btn-info">update <i class="fa fa-pencil"></i></button>
+                                        <button (click)="deleteProduct(client.id)" class="btn btn-danger" style="margin-left:10px;">Delete <i class="fa fa-times"></i></button>
+                    
+                                    <button (click)="ClientDetails(client.id)" type="button" class="btn btn-link "><i class="fa-solid fa-rectangle-list" style="margin-left:10px;"></i> &nbsp; Détails</button>
+
+                                </div>
+                                <ul class="social-links list-inline mb-0">
+                                    <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Skype"><i class="fa fa-skype"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                  
+                  
+                    
+                </div>
+
+    </div>
+  
+  
+  
+  <!-- Notification for no employees -->
+  <div *ngIf class="col-lg-12 col-md-12 col-xl-12">
+  <div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">NO EMPLOYEES!</h4>
+    <p>No Employees were found.</p>
+  </div>
+  </div>
+            </div>
+    
+
+
+
+              <!--fin code snippet-->
+    
+
+    <div class="row m-3 text-center">
+        <app-pagination></app-pagination>
+    </div>
+
+
+

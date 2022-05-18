@@ -1,0 +1,59 @@
+<div class="container my-container">
+  <div class="card justify-content-md-center">
+      <div class="card-header text-center">
+         <h2> <p class="fw-bolder">S'inscrire</p> </h2>
+      </div>
+    <div class="card-cody">
+
+            <div class="mb-3">
+                <input type="text" class="form-control"  placeholder="Nom">
+            </div>
+
+            <div class="mb-3">
+              <input type="text" class="form-control"  placeholder="prenom">
+            </div>
+
+          <div class="mb-3">
+            <input type="email" class="form-control"  placeholder="E-mail">
+          </div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control"  placeholder="Adresse1">
+        </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control"  placeholder="Adesse2">
+      </div>
+
+    <div class="mb-3">
+      <input type="text" class="form-control"  placeholder="ville">
+    </div>
+
+    <div class="mb-3">
+       <input type="text" class="form-control"  placeholder="code postal">
+   </div>
+
+   <div class="mb-3">
+     <input type="text" class="form-control"  placeholder="pays">
+  </div>
+
+   
+           <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Mot de passe">
+         </div> 
+
+         <div class="mb-3">
+            <input type="password" class="form-control"  placeholder="Confirmer mot de passe">
+         </div>
+
+         <div class="mb-3 d-flex justify-content-between">
+          <a [routerLink]="['/login']" class="btn btn-link">Se connecter</a>
+
+            <button type="button" class="btn btn-primary" (click)="inscri()">
+                <i class="fa-solid fa-check"></i>&nbsp; S'inscrire</button>
+
+    
+         </div> 
+    </div>
+  </div>
+</div>

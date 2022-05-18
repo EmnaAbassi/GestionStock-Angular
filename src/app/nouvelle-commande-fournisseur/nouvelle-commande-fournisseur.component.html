@@ -1,0 +1,53 @@
+<div class="col mb-3">
+    <div class="col-md-12 mb-3">
+        <img src="assets/cmd.jpg" class="" width="200px" height="200px">
+    </div>
+   <hr>
+     <div class="col-md-12">
+         <div class="col-md-12 mb-3">
+             <h2><i class="fa-solid fa-circle-info blue-color"></i>&nbsp; Créer une nouvelle commande fournisseur</h2>
+         </div> 
+  
+          <div class="col-md-12">
+              <form (ngSubmit)="onSubmit()">
+  
+                  <div class="form-group">
+                      <label>code</label>
+                      <input type="text" class="form-control" id="code" [(ngModel)]="four.code" name="code" >
+                  </div>
+    
+                  <div class="form-group">
+                    <label>dateDeCommande</label>
+                    <input type="text" class="form-control" id="dateDeCommande" [(ngModel)]="four.dateDeCommande"
+                   name="dateDeCommande" >
+                </div>
+  
+                <div class="form-group">
+                  <label>fournisseur</label>
+                  <input type="text" class="form-control" id="fournisseur" [(ngModel)]="four.fournisseur"
+                   name="fournisseur" >
+              </div>
+  
+              <div class="form-group">
+                  <label>article</label>
+                  <input type="text" class="form-control" id="article" [(ngModel)]="four.article"
+              name="article" >
+              </div>
+  
+              
+        
+                <button type="submit" class="btn btn-success" value="Submit">
+                    <i class="fa-solid fa-save blue-color"></i>Submit</button>
+                
+                              <button class="btn btn-danger mr-3"(click)="cancel()">
+                                  <i class="fa-solid fa-ban blue-color"></i> &nbsp; Annuler</button>
+          </form>
+                   
+                  
+        
+  
+              
+  
+      </div>
+     </div>
+  </div>

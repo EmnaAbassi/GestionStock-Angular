@@ -1,0 +1,133 @@
+<div class="col mb-3">
+   
+     <div class="col-md-12">
+         <div class="col-md-12 mb-3 mt-3">
+             <h2> Nouvelle Commande {{origin}}</h2>
+         </div> 
+  
+          <div class="row p-3">
+            <div class="card col-md-5 custom-border-right">
+                <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control"  placeholder="Code commande">
+                    </div>
+                    <div class="mb-3">
+                      <input type="date" class="form-control" placeholder="Date Commande">
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Sélectionner un Client</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                      </select>
+                      </div>
+                    
+                  </form>
+            </div>
+
+            <div class="card col-md-5 custom-border-right">
+                <div class="col">
+          
+                    <div class=" row">
+                       <div class="col-md-1"><i class="fa-solid fa-circle-info blue-color"></i></div>
+                       <div class="col-md-11">Nom</div>
+                     </div>
+                     <div class=" row">
+                       <div class="col-md-1"> <i class="fa-solid fa-circle-info blue-color"></i></div>
+                       <div class="col-md-11">Prénom</div>
+                     </div>
+               
+                     <div class=" row">
+                       <div class="col-md-1"><i class="fa-solid fa-phone blue-color"></i></div>
+                       <div class="col-md-11">46273461</div>
+                     </div>
+                     <div class=" row">
+                        <div class="col-md-1"><i class="fas fa-hourglass-half blue-color"></i></div>
+                        <div class="col-md-11">en préparation</div>
+                      </div>
+               
+                     
+                   </div> 
+            </div>
+
+            <div class="card col-md-2 text-center">
+                <img src="assets/cmd.jpg" class="rounded-circle" width="150px" height="150px"/>
+            </div>
+         
+
+      </div>
+     </div>
+            <div class="row mt-2 p-3">
+             <form>
+
+              <div class="form-row">
+                 <div class="col">
+                     <input type="text" class="form-control" placeholder="Code article">
+                 </div>
+                <div class="col">
+                     <input type="text" class="form-control" placeholder="quantité">
+                 </div>
+
+            
+                 <div class="col">
+                     <input type="text" class="form-control" placeholder="Prix unitaire">
+                  </div>  
+                  <div class="col">
+                 </div>  
+                  <button type="button" class="btn btn-success"><i class="fas fa-plus"></i></button>                   
+           </div>
+            
+           </form>
+         </div>
+         <div class="row mt-2 p-3">
+            <div class="col mt-2 p-3 " style="max-height: 300px;
+            overflow-y: scroll;">
+                <app-detail-cmd></app-detail-cmd>
+                <app-detail-cmd></app-detail-cmd>
+                 <app-detail-cmd></app-detail-cmd>
+                 <app-detail-cmd></app-detail-cmd>
+                 <app-detail-cmd></app-detail-cmd>
+                 <app-detail-cmd></app-detail-cmd>
+                 <app-detail-cmd></app-detail-cmd>
+                 <app-detail-cmd></app-detail-cmd>
+                 <app-detail-cmd></app-detail-cmd>
+                 <app-detail-cmd></app-detail-cmd>
+
+            
+
+            </div> 
+            
+                  
+            </div>
+            <div class="card col mt-2 p-3">
+                <div class="col-md-12 text-right">                    
+                    <h3>Total de la commande:135.9</h3>
+
+                </div>
+            </div> 
+    
+          <div class="col-md-12 text-right mt-2">
+              <button class="btn btn-danger mr-3"(click)="cancel()">
+                  <i class="fa-solid fa-ban blue-color"></i> &nbsp; Annuler</button>
+              <button class="btn btn-primary">
+                  <i class="fa-solid fa-save blue-color"></i>Enregistrer</button>
+  
+          </div>
+        </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

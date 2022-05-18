@@ -1,0 +1,68 @@
+<div class="col">
+    <div class="row m-3">
+        
+        <div class="col-md-8 p-0">
+           <h1>Liste des catégories</h1>
+        </div>
+        <div class="col-md-4 text-right">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-warning">
+                        <i class="fa-solid fa-upload"></i> &nbsp;
+            
+                        IMPORTER</button></div>
+            
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-success">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> &nbsp;
+                        EXPORTER
+                    </button>
+                </div>
+                <div class="p-2 flex-fill bd-highlight">
+                    <button type="button" class="btn btn-primary"(click)="newCategory()">
+                        <i class="fa-solid fa-plus"></i> &nbsp;
+                        NOUVEAU
+                    </button>
+                </div>
+             </div>
+        </div>
+    </div>
+
+    <div class="col m-3">
+        <h2></h2>
+        <table  class="table table-striped">
+            <thead class="thead-dark">
+              <tr class="table-light">
+                <th scope="col">#</th>
+        
+                <th scope="col">Code</th>
+                <th scope="col">description</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let category of categories" >
+                   <td>{{category.id}}</td>
+                   <td>{{category.code}}</td>
+                   <td>{{category.description}}</td>
+                    <td><button (click)="updateCategory(category.id)" class="btn btn-info">update</button>
+                        <button (click)="deleteProduct(category.id)" class="btn btn-danger" style="margin-left:10px;">Delete</button>
+                        <button (click)="ProductDetails(category.id)" type="button" class="btn btn-link "><i class="fa-solid fa-rectangle-list" style="margin-left:10px;"></i> &nbsp; Détails</button>
+
+                    </td>
+                  
+              </tr>
+            </tbody>
+          </table>
+
+
+
+    </div>
+
+    <div class="row m-3 text-center">
+        <app-pagination></app-pagination>
+    </div>
+
+
+
+</div>
